@@ -9,18 +9,11 @@
 <body>
     <h1>Alunos:</h1>
     <ul>
-        
-        <!-- {% for i in alunos %}
-            <li><a href="./detalhe.html {{ i.id }}">{{ i.nome }} {{ i.idade }}</a> </li>
-        {% endfor %} -->
+
 
         {% for i in alunos %}
-        <li><a href="detalhe.html">{{ i.nome }} {{ i.idade }}</a></li>
+            <li><a href=" {% url 'detalhe' id=i.id %} ">{{ i.nome }} {{ i.idade }}</a></li>
         {% endfor %}
-
-        <!-- {% for x in mymembers %}
-             <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
-        {% endfor %} -->
 
     </ul>
 </body>

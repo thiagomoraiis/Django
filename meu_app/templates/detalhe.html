@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{% dAluno.nome %}}</h1>
 
-    <p>Phone: {{% dAluno.idade %}}</p>
-    <p>Turma {{% dAluno.turma %}} </p>
+    <h1>{{ dAluno.nome }}</h1>
+    <p>Phone: {{ dAluno.telefone }}</p>
+    <p>Turma {{ dAluno.turma }} </p>
 
-    <p>back to <a href="detalhe.html">Alunos</a> </p>
+    <p>back to <a href=" {% url 'meu_app' %} ">Alunos</a> </p>
 
 </body>
 </html>

@@ -20,8 +20,8 @@ def meu_app(request):
     }
     return HttpResponse(template.render(context, request))
 
-def detalhe(request):
-    dAluno = Aluno.objects.all().values
+def detalhe(request, id):
+    dAluno = Aluno.objects.get(id=id)
     template = loader.get_template('detalhe.html')
     context = {
         'dAluno':dAluno,
